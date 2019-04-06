@@ -8,26 +8,54 @@ html {
 
 header {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  background-color: black;
   width: 100%;
-  position: fixed;
-  z-index: 1;
-  height: 2.32rem;
+  background-color: black;
+  justify-content: center;
 }
 
-.logo {
+div.header-info {
   display: flex;
+  width: 960px;
+  justify-content: center;
   align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
 }
 
-.logo img {
+span.company-name {
+  color: white;
+  font-family: Helvetica;
+  font-size: 1rem;
+  margin-top: 0.66rem;
+  margin-bottom: 0.66rem;
+  font-weight: bold;
+}
+
+img.logo {
   height: 1.5rem;
   margin-left: 0.5rem;
   margin-right: 1rem;
-  width: auto;
+}
+
+/* top container */
+
+div.top-container {
+  display: flex;
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.new-arrival {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 20rem;
+  height: 10rem;
+}
+
+div.new-arrival span {
+  color: white;
+  font-family: Helvetica;
+  font-weight: bold;
+
 }
