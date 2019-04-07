@@ -36,7 +36,7 @@ img.logo {
   margin-right: 1rem;
 }
 
-/* top container */
+/* main banner */
 
 div.main-banner {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
@@ -58,6 +58,21 @@ div.main-banner {
 .headline h1 {
   margin: 0.25rem 0;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 470px) {
+  div.main-banner {
+    height: 15rem;
+  }
+  .headline {
+    padding: 1rem 2rem;
+    top: 10rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .headline h4 {
+    font-size: 0.77rem;
+  }
 }
 
 /* navigation bar */
@@ -105,12 +120,14 @@ div.products {
   align-content: center;
   width: 30%;
   height: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 div.products img {
   height: 9rem;
   padding: 2rem 2rem;
-
+  max-width: 8rem;
 }
 
 div.products span {
@@ -118,8 +135,26 @@ div.products span {
   color: white;
   text-align: center;
   padding: 0.5rem 0;
-  width: auto;
+  width: 100%;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  div.products {
+    width: 47%;
+  }
+  div.products.glasses {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  div.products.glasses, div.products.watch {
+    display: none;
+  }
+  div.products {
+    width: 90%;
+  }
 }
 
 /* store info */
@@ -152,6 +187,21 @@ div.store-details span {
   padding-right: 2rem;
 }
 
+@media only screen and (max-width: 460px) {
+  div.store-info {
+    flex-wrap: wrap;
+  }
+  div.store-details {
+    flex-wrap: wrap;
+  }
+  div.store-info span {
+    width: 90%;
+  }
+  div.store-details span {
+    width: 90%;
+  }
+}
+
 /* footer */
 
 footer div.container {
@@ -165,4 +215,14 @@ footer div.container span {
   color: white;
   text-align: left;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 470px) {
+  footer div.container span {
+    text-align: center;
+  }
+
+  footer div.container {
+    justify-content: center;
+  }
 }
